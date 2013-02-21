@@ -2,6 +2,9 @@
 			
 			<div id="content" class="clearfix row-fluid">
 			
+<div class= "clearfix mensola">
+	<div class="central">
+			
 				<div id="main" class="span8 clearfix" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -40,7 +43,7 @@
 					
 					</article> <!-- end article -->
 					
-					<?php comments_template('',true); ?>
+					
 					
 					<?php endwhile; ?>			
 					
@@ -58,11 +61,11 @@
 					</article>
 					
 					<?php endif; ?>
+					
+	</div>
+</div>
+
 			
 				</div> <!-- end #main -->
     
-				<?php get_sidebar(); // sidebar 1 ?>
-    
-			</div> <!-- end #content -->
-
-<?php get_footer(); ?>
+				
