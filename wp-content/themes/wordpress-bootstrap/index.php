@@ -4,20 +4,19 @@
 				$blog_hero = of_get_option('blog_hero');
 				if ($blog_hero){
 			?>
-			<div class="clearfix row-fluid">
-				<div class="hero-unit">
-				
-					<h1><?php bloginfo('title'); ?></h1>
-					
-					<p><?php bloginfo('description'); ?></p>
-				
-				</div>
-			</div>
+
+
+	
+	
 			<?php
 				}
 			?>
 			
 			<div id="content" class="clearfix row-fluid">
+			
+
+<div class= "clearfix mensola">
+	<div class="central">
 			
 				<div id="main" class="span8 clearfix" role="main">
 
@@ -78,8 +77,15 @@
 					<?php endif; ?>
 			
 				</div> <!-- end #main -->
+				
+				
+				
+	
+	</div>
+</div>
+
     
-				<?php get_sidebar(); // sidebar 1 ?>
+				
     
 			</div> <!-- end #content -->
 
