@@ -1,0 +1,15 @@
+/*-- variables --*/
+/* -- ebd variabes --*/
+body {
+  background: url('../images/back-height318.jpg');
+}
+body #logo {
+  text-indent: -9999em;
+  display: inline-block;
+}
+body #logo:hover {
+  background: #ff0000;
+}
+body.single-post {
+  background: black;
+}
