@@ -615,6 +615,7 @@ body #logo {
 	height: 142px;
 	margin:225px auto 0;
 	position:relative;
+	width:80%;
 }
 
 
@@ -630,6 +631,12 @@ body #logo {
 .container-fluid{
 		max-width: 1200px !important;
 	}
+	
+	
+  [class*="span"],
+    .row-fluid [class*="span"] {
+      float: left;
+    }
 
 
 /* -------------------------------------------

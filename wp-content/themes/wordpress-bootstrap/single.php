@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 			
 			<div id="content" class="clearfix row-fluid">
-			
+	
 <div class= "clearfix mensola">
 	<div class="central">
 			
@@ -9,6 +9,37 @@
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
+					  		<pre>
+          			<?php
+          			global $post;
+          			$theid = get_the_ID();
+          			$tester[0] = "$theid";
+          			$ins = serialize($tester);
+          			//echo $ins;
+          			$fivesdrafts = $wpdb->get_results( 
+                	"
+                	SELECT * 
+                	FROM $wpdb->postmeta
+                	WHERE meta_value = '$ins'
+                	"
+                );
+
+                foreach ( $fivesdrafts as $fivesdraft ) 
+                                     {
+                                       $my_query = query_posts('post_id='.$fivesdraft->post_id.'8&post_type=press-book');
+                                       
+                                       foreach ($my_query as $post) {
+                                          //setup_postdata($post);
+                                          //the_title();
+                                          //the_content();
+                                          //print_r($post);
+                                       }
+                                    }
+                //print_r($fivesdrafts)
+
+          			?>
+          			</pre>
+          			
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
 						
 						<header>
@@ -22,7 +53,7 @@
 						</header> <!-- end article header -->
 					
 						<section class="post_content clearfix" itemprop="articleBody">
-							<?php the_content(); ?>
+						
 							
 							<?php wp_link_pages(); ?>
 					

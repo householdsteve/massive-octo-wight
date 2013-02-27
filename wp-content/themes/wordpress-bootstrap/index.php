@@ -19,6 +19,8 @@
 	<div class="central">
 			
 				<div id="main" class="span8 clearfix" role="main">
+				  
+
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 					
