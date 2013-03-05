@@ -31,6 +31,14 @@ function addTwitterBSClass(thisObj) {
 
 // as the page loads, cal these scripts
 $(document).ready(function() {
+  
+  // this is our custom call to the royal sliders
+          $(".royalSlider").royalSlider({
+              // options go here
+              // as an example, enable keyboard arrows nav
+              keyboardNavEnabled: true
+          });  
+      
 
 	// modify tag cloud links to match up with twitter bootstrap
 	$("#tag-cloud a").each(function() {

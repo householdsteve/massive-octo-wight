@@ -21,7 +21,8 @@ require_once('library/shortcodes.php');
 // Admin Functions (commented out by default)
 // require_once('library/admin.php');         // custom admin functions
 
-
+// load files for royal slider
+register_new_royalslider_files(2);
 
 // Custom Backend Footer
 add_filter('admin_footer_text', 'bones_custom_admin_footer');
@@ -499,10 +500,14 @@ function theme_js(){
   // wp_register_script('bootstrap-tooltip', get_template_directory_uri().'/library/js/bootstrap-tooltip.js');
   // wp_register_script('bootstrap-transition', get_template_directory_uri().'/library/js/bootstrap-transition.js');
   // wp_register_script('bootstrap-typeahead', get_template_directory_uri().'/library/js/bootstrap-typeahead.js');
+  
+  // load royal slider
+  wp_register_script('royalsliderscripts', get_template_directory_uri().'/library/js/jquery.royalslider.min.js');
 
   wp_register_script('wpbs-scripts', get_template_directory_uri().'/library/js/scripts.js');
   wp_register_script('modernizr', get_template_directory_uri().'/library/js/modernizr.full.min.js');
-
+  
+  wp_enqueue_script('royalsliderscripts');
   wp_enqueue_script('less', array(''), '1.3.0', true);
   wp_enqueue_script('jquery');
   wp_enqueue_script('bootstrap', array('jQuery'), '1.1', true);
