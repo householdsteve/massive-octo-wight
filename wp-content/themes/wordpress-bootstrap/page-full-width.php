@@ -10,47 +10,34 @@ Template Name: Full Width Page
 			
 				<div id="main" class="span12 clearfix" role="main">
 
-					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-					
-					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-						
-						<header>
-							
-							<div class="page-header"><h1><?php the_title(); ?></h1></div>
-						
-						</header> <!-- end article header -->
-					
-						<section class="post_content">
-							<?php the_content(); ?>
-					
-						</section> <!-- end article section -->
-						
-						<footer>
-			
-							<p class="clearfix"><?php the_tags('<span class="tags">' . __("Tags","bonestheme") . ': ', ', ', '</span>'); ?></p>
-							
-						</footer> <!-- end article footer -->
-					
-					</article> <!-- end article -->
-					
-					<?php comments_template(); ?>
-					
-					<?php endwhile; ?>	
-					
-					<?php else : ?>
-					
-					<article id="post-not-found">
-					    <header>
-					    	<h1><?php _e("Not Found", "bonestheme"); ?></h1>
-					    </header>
-					    <section class="post_content">
-					    	<p><?php _e("Sorry, but the requested resource was not found on this site.", "bonestheme"); ?></p>
-					    </section>
-					    <footer>
-					    </footer>
-					</article>
-					
-					<?php endif; ?>
+				     <?php $loop = new WP_Query( array( 'post_type' => 'folder', 'posts_per_page' => 10 ) ); ?>
+
+          <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+
+              <?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); ?>
+
+                  <?php
+                    if(get_field('press_books')): ?>
+                    <div class="royalSlider rsDefault">
+                    	<?php while(has_sub_field('press_books')): ?>
+                        <div class="rsContent">
+                                <img class="rsImg" src="<?php the_sub_field('cover') ?>" alt="press book" />
+                                <div class="rsTmb">
+                                  
+                                  <a href="<?php the_sub_field('flipdocs_link'); ?>" target="_blank">
+                                    <img src="<?php the_sub_field('cover') ?>" alt="" width="60" height="136" />
+                                  </a>
+                                  
+                                </div>
+                            </div>
+                    		  
+
+                    	<?php endwhile; ?>
+                      </div>
+                    <?php endif; ?>
+
+
+          <?php endwhile; ?>
 			
 				</div> <!-- end #main -->
     
