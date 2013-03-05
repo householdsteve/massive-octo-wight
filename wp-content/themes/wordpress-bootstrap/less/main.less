@@ -8,7 +8,7 @@ body {
   #logo {
   	text-indent:-9999em;
   	display:inline-block;
-  	&:hover { background:@color }
+  	&:hover { opacity:0.5; }
   }
   &.single-post {
     background:black url('../images/back-page-501h.jpg');
@@ -18,6 +18,31 @@ body {
 
 
 
-.row-fluid{
+.row-fluid {
 		max-width: 1200px !important;
-	}
+}
+
+.page-header {
+  border:none;
+}
+
+.royalSlider {
+ width:100%;
+ height:160px;
+ position:relative;
+ top:-95px;
+}
+	
+	
+.rsVisibleNearbyWrap {
+  display:none !important;
+}
+
+.rsDefault, .rsDefault .rsOverflow, .rsDefault .rsSlide, .rsDefault .rsVideoFrameHolder, .rsDefault .rsThumbs {
+ background:none; 
+}
+
+.rsDefault .rsThumb {
+ height:110px;
+ width:75px; 
+}

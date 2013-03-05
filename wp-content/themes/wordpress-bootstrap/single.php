@@ -4,22 +4,36 @@
 	
 <div class= "clearfix mensola">
 	<div class="central">
+	  
+	  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+                       
+                  <?php endwhile; ?>
+             <?php endif; ?>
 			
-				<div id="main" class="span8 clearfix" role="main">
+				<div id="main" class="span12 clearfix" role="main">
 
 					<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-                             <?php
-                              
-                              if(get_field('press_books')): ?>
-                              <div class="royalSlider rsDefault">
-                              	<?php while(has_sub_field('press_books')): ?>
-
-                              		  <a class="rsImg" href="<?php the_sub_field('flipdocs_link'); ?>"><img src="<?php the_sub_field('cover') ?>" alt="" width="120" /></a>
-
-                              	<?php endwhile; ?>
+                  <?php
+                    if(get_field('press_books')): ?>
+                    <div class="royalSlider rsDefault">
+                    	<?php while(has_sub_field('press_books')): ?>
+                        <div class="rsContent">
+                                <img class="rsImg" src="<?php the_sub_field('cover') ?>" alt="press book" />
+                                <div class="rsTmb">
+                                  
+                                  <a href="<?php the_sub_field('flipdocs_link'); ?>" target="_blank">
+                                    <img src="<?php the_sub_field('cover') ?>" alt="" width="60" height="136" />
+                                  </a>
+                                  
                                 </div>
-                              <?php endif; ?>
+                            </div>
+                    		  
+
+                    	<?php endwhile; ?>
+                      </div>
+                    <?php endif; ?>
           			
           		
 					<article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">

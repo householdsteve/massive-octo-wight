@@ -36,7 +36,21 @@ $(document).ready(function() {
           $(".royalSlider").royalSlider({
               // options go here
               // as an example, enable keyboard arrows nav
-              keyboardNavEnabled: true
+              keyboardNavEnabled: true,
+              visibleNearby: {
+                         enabled: true,
+                         centerArea: 0.5,
+                         center: true,
+                         breakpoint: 650,
+                         breakpointCenterArea: 0.64,
+                         navigateByCenterClick: true
+                     },
+              controlNavigation: 'thumbnails',
+              thumbs: {
+             		// thumbnails options go gere
+             		spacing: 10,
+             		arrowsAutoHide: true
+             	}
           });  
       
 
