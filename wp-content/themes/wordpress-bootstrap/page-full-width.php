@@ -20,18 +20,33 @@ Template Name: Full Width Page
 	<div class="centrall">
 
 
-<!-- 
 	<?php the_post_thumbnail( 'wpbs-featured' ); ?>
 							
-							<div class="homese"><h1 class="single-title" itemprop="headline"><?php
+		<div class="homese">
+			<h2 class="single-title" itemprop="homese" style="position: absolute; margin-top: -80px !important;">
+				<a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark" >
+					<span class="mesehome">
+						<?php
 							$d = explode("-",get_field('folder_month'));
 							$fixed = mktime(0,0,0,$d[1],$d[2],$d[0]);
 							$mese = date ("F", $fixed);
-							 echo date("Y", $fixed); ?><span class="mesehome"><?php echo strtoupper($mese) ?></span></h1></div>
+							echo date("Y", $fixed); 
+						?>
+					</span>
+				</br>
+					<?php echo strtoupper($mese) ?>
+				</a>
+			</h2>
+		</div>
+
+
+
+
+<!-- 
+              <?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark" >', '</a></h2>' ); ?>
  -->
 
 
-              <?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark" >', '</a></h2>' ); ?>
 
 
                   <?php
