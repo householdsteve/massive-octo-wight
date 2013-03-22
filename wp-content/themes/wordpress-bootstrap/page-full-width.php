@@ -11,9 +11,17 @@ Template Name: Full Width Page
 			
 				<div id="main" class="span12 clearfix" role="main">
 
-				     <?php $loop = new WP_Query( array( 'post_type' => 'folder', 'posts_per_page' => 10 ) ); ?>
+				     <?php $loop = new WP_Query( array( 'post_type' => 'folder', 'posts_per_page' => 10 ) ); 
+				     
+				     $count = 0;
+				     $totalposts = $loop->post_count;
+				     
+				     ?>
 
-          <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+          <?php while ( $loop->have_posts() ) : $loop->the_post();
+          
+          	
+		  ?>
           
           
 <div class= "clearfix mensolaa">
@@ -24,17 +32,23 @@ Template Name: Full Width Page
 							
 		<div class="homese">
 			<h2 class="single-title" itemprop="homese" style="position: absolute; margin-top: -80px !important;">
-				<a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark" >
+				<a href="<?php echo get_permalink()?>">
 					<span class="mesehome">
 						<?php
 							$d = explode("-",get_field('folder_month'));
 							$fixed = mktime(0,0,0,$d[1],$d[2],$d[0]);
 							$mese = date ("F", $fixed);
-							echo date("Y", $fixed); 
+							$mesetest = date ("n", $fixed);							
+							if (($mesetest == 12) || ($count == 0)) {
+								echo date("Y", $fixed); 
+							}
+						
 						?>
+					</span><span class="annohome">
+					<?php echo strtoupper($mese); 
+						$count++;
+					?>
 					</span>
-				</br>
-					<?php echo strtoupper($mese) ?>
 				</a>
 			</h2>
 		</div>
