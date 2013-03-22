@@ -17,7 +17,6 @@ body {
   background: #000000 url('../images/back-height318.jpg');
 }
 body #logo {
-  margin-left: 80px;
   text-indent: -9999em;
   display: inline-block;
 }
@@ -223,4 +222,8 @@ body #logo {
   .annohome {
     display: inline;
   }
+}
+.fitwidth {
+  width: 85%;
+  margin: auto;
 }

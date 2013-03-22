@@ -89,7 +89,7 @@
 	<body <?php body_class(); ?>>
 		<div class="container-fluid">		
 		<header role="banner">
-			<nav role="navigation">
+			<nav role="navigation" class="fitwidth">
 			<a id="logo" title="<?php echo get_bloginfo('description'); ?>" href="<?php echo home_url(); ?>"><?php bloginfo('name'); ?></a>
 			</nav>
 		</header> <!-- end header -->
