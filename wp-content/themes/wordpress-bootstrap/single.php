@@ -42,7 +42,11 @@
 						
 							<?php the_post_thumbnail( 'wpbs-featured' ); ?>
 							
-							<div class="page-header"><h1 class="single-title" itemprop="headline"><?php the_title(); ?></h1></div>
+							<div class="page-header"><h1 class="single-title" itemprop="headline"><?php
+							$d = explode("-",get_field('folder_month'));
+							$fixed = mktime(0,0,0,$d[1],$d[2],$d[0]);
+							$mese = date ("F", $fixed);
+							 echo date("Y", $fixed); ?><span class="mese"><?php echo strtoupper($mese) ?></span></h1></div>
 							
 						
 						

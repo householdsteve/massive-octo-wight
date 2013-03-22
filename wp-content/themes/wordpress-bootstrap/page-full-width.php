@@ -5,6 +5,7 @@ Template Name: Full Width Page
 ?>
 
 <?php get_header(); ?>
+
 			
 			<div id="content" class="clearfix row-fluid">
 			
@@ -13,8 +14,25 @@ Template Name: Full Width Page
 				     <?php $loop = new WP_Query( array( 'post_type' => 'folder', 'posts_per_page' => 10 ) ); ?>
 
           <?php while ( $loop->have_posts() ) : $loop->the_post(); ?>
+          
+          
+<div class= "clearfix mensolaa">
+	<div class="centrall">
 
-              <?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark">', '</a></h2>' ); ?>
+
+<!-- 
+	<?php the_post_thumbnail( 'wpbs-featured' ); ?>
+							
+							<div class="homese"><h1 class="single-title" itemprop="headline"><?php
+							$d = explode("-",get_field('folder_month'));
+							$fixed = mktime(0,0,0,$d[1],$d[2],$d[0]);
+							$mese = date ("F", $fixed);
+							 echo date("Y", $fixed); ?><span class="mesehome"><?php echo strtoupper($mese) ?></span></h1></div>
+ -->
+
+
+              <?php the_title( '<h2 class="entry-title"><a href="' . get_permalink() . '" title="' . the_title_attribute( 'echo=0' ) . '" rel="bookmark" >', '</a></h2>' ); ?>
+
 
                   <?php
                     if(get_field('press_books')): ?>
@@ -30,10 +48,11 @@ Template Name: Full Width Page
                                   
                                 </div>
                             </div>
-                    		  
-
+                 		  
                     	<?php endwhile; ?>
                       </div>
+	</div>
+</div>
                     <?php endif; ?>
 
 
