@@ -15,6 +15,13 @@
     src: url("http://cdn2.yoox.biz/Os/fonts/style_159305.eot?#iefix") format("embedded-opentype"), url("http://cdn2.yoox.biz/Os/fonts/style_159305.eot?#iefix") format("eot"), url("http://cdn2.yoox.biz/Os/fonts/style_159305.woff") format("woff"), url("http://cdn2.yoox.biz/Os/fonts/style_159305.ttf") format("truetype"), url("http://cdn2.yoox.biz/Os/fonts/style_159305.svg#MuseoSans-300") format("svg");
 }
 
+.transizioni (@tempo:0.7s) {
+ transition: all @tempo ease-in-out;
+ -moz-transition: all @tempo ease-in-out;
+ -webkit-transition: all @tempo ease-in-out;
+ -o-transition: all @tempo ease-in-out;
+ }
+
 /* -- end variabes --*/
 
 body {
@@ -221,7 +228,7 @@ body #logo {
 }
 
 
-.homese{position:relative;}
+.homese{position:relative; .transizioni;}
 
 
 .homese h1 {
@@ -230,6 +237,7 @@ margin: -40px;
 font-size: 48px;
 font-family: "MuseoSans-100";
 opacity:0.2;
+ .transizioni;
 }
 
 .mesehome {
@@ -238,9 +246,10 @@ color: white;
 font-weight: lighter;
 font-size: 36px;
 opacity:0.2;
+ .transizioni;
 }
 
-.annohome{display:block;}
+.annohome{display:block;.transizioni;}
 
 
 @media all and (max-width: 820px) {
@@ -253,11 +262,17 @@ body.home  h2 {
  position:relative;
  top:-127px;
  float:none;
+ .transizioni;
 }
 .homese{position:relative;
-top:130px;}
+top:130px;
+.transizioni;
+}
 
-.annohome{display:inline;}
+.annohome{
+display:inline;
+.transizioni;
+}
 
 }
 

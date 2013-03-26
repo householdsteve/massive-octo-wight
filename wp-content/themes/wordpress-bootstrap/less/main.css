@@ -189,6 +189,10 @@ body #logo {
 }
 .homese {
   position: relative;
+  transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
 }
 .homese h1 {
   color: white;
@@ -196,6 +200,10 @@ body #logo {
   font-size: 48px;
   font-family: "MuseoSans-100";
   opacity: 0.2;
+  transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
 }
 .mesehome {
   font-family: "MuseoSans-100";
@@ -203,9 +211,17 @@ body #logo {
   font-weight: lighter;
   font-size: 36px;
   opacity: 0.2;
+  transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
 }
 .annohome {
   display: block;
+  transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -webkit-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
 }
 @media all and (max-width: 820px) {
   body.home .royalSlider {
@@ -214,13 +230,25 @@ body #logo {
     position: relative;
     top: -127px;
     float: none;
+    transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
   }
   .homese {
     position: relative;
     top: 130px;
+    transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
   }
   .annohome {
     display: inline;
+    transition: all 0.7s ease-in-out;
+    -moz-transition: all 0.7s ease-in-out;
+    -webkit-transition: all 0.7s ease-in-out;
+    -o-transition: all 0.7s ease-in-out;
   }
 }
 .fitwidth {
