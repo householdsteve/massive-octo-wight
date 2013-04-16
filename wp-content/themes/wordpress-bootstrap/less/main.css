@@ -130,7 +130,7 @@ body #logo {
   display: inline-block;
   height: 36px;
   width: 285px;
-  background: url(../library/img/logo.png);
+  background: url(../library/img/APress600.png);
 }
 .mensola {
   max-width: 1200px;
@@ -254,4 +254,19 @@ body #logo {
 .fitwidth {
   width: 85%;
   margin: auto;
+}
+.serie {
+  width: 25px;
+  height: 37px;
+  background: url(../images/label.png);
+  float: left;
+  z-index: 100;
+  position: absolute;
+  margin-top: -137px;
+  margin-left: 7px;
+}
+.serie p {
+  color: white;
+  font-family: serif;
+  margin: 8px 11px;
 }

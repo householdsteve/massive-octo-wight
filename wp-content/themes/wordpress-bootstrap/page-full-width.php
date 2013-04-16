@@ -66,14 +66,25 @@ Template Name: Full Width Page
                   <?php
                     if(get_field('press_books')): ?>
                     <div class="royalSlider rsDefault">
-                    	<?php while(has_sub_field('press_books')): ?>
+                    	<?php while(has_sub_field('press_books')):
+                    	?>
+                    	
                         <div class="rsContent">
                                 <img class="rsImg" src="<?php the_sub_field('cover') ?>" alt="press book" />
                                 <div class="rsTmb">
-                                  
-                                  <a href="<?php the_sub_field('flipdocs_link'); ?>" target="_blank">
+								  <?php $bs = get_sub_field('book_series'); ?>								  
+								  <a href="<?php the_sub_field('flipdocs_link'); ?>" target="_blank">
+                                  	
                                     <img src="<?php the_sub_field('cover') ?>" alt="" width="60" height="136" />
                                   </a>
+                                  
+                                <?php if ($bs > 0) { ?>
+                                  <div class="serie">
+                                  	<div class="persp">
+                                  		<p><?php echo($bs) ?><p>
+                                  	</div>
+                                  </div>
+                                  <?php }  ?>
                                   
                                 </div>
                             </div>

@@ -86,7 +86,17 @@
 				
 	</head>
 	
+	
+	
 	<body <?php body_class(); ?>>
+	
+	<div id="visit"style="position:fixed;background:url('http://cdn2.yoox.biz/Os/armanigroup/common/bg/bgHeader.png')top left repeat-x;width: 100%;height: 30px;font-family: 'MuseoSans-700',Arial,sans;font-size: 11px;line-height: 32px;text-transform: uppercase;z-index: 1109;top: 0;">
+		<div style="max-width:1024px;margin:auto;padding-left:20px;padding-right:20px; width:85%; text-align:center;">
+			<a style="color: #8C908F;font-size: 11px;line-height: 32px;text-transform: uppercase;text-decoration: none;font-weight: lighter;" href="http://armani.com" target="_blank" class="world" title="World of Armani">World of Armani.com</a>
+		
+	     </div>
+</div>
+	
 		<div class="container-fluid">		
 		<header role="banner">
 			<nav role="navigation" class="fitwidth">
